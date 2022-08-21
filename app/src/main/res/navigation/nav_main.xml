@@ -4,10 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_main"
     app:startDestination="@id/feedFragment">
-    //____________________________________________________________________________________________//
     <fragment
         android:id="@+id/feedFragment"
-        android:name="ru.netology.nmedia.activity.FeedFragment"
+        android:name="ru.netology.nmedia_pusher.activity.FeedFragment"
         android:label="fragment_feed"
         tools:layout="@layout/fragment_feed" >
         <action
@@ -25,26 +24,28 @@
         <action
             android:id="@+id/action_feedFragment_to_postFragment"
             app:destination="@id/postFragment" >
-        <argument
-            android:name="postId"
-            app:argType="integer" />
+            <argument
+                android:name="postId"
+                app:argType="integer" />
         </action>
     </fragment>
-    //____________________________________________________________________________________________//
+
+    Продолжение (Discord не даёт много текста вписать)
     <fragment
         android:id="@+id/newPostFragment"
-        android:name="ru.netology.nmedia.activity.NewPostFragment"
+        android:name="ru.netology.nmedia_pusher.activity.NewPostFragment"
         android:label="fragment_new_post"
         tools:layout="@layout/fragment_new_post" >
         <argument
             android:name="content"
             app:argType="string" />
     </fragment>
-    //____________________________________________________________________________________________//
 
+    <!-- TODO Здесь я так понимаю, должен быть PostFragment, но его в проекте не нашел -->
+    <!-- Добавьте его и впишите в name -->
     <fragment
         android:id="@+id/postFragment"
-        android:name="ru.netology.nmedia.activity.PostFragment"
+        android:name="ru.netology.nmedia_pusher.activity.NewPostFragment"
         android:label="fragment_post"
         tools:layout="@layout/fragment_post" >
         <argument
